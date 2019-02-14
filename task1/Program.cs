@@ -9,7 +9,7 @@ namespace task1
 {
     class Program
     {
-        static void P(string s)
+        static void P(string s) //создаем функцию, чтобы проверить, является ли строка полиндромом
         {
             bool ok = true;
             for (int i = 0; i < s.Length; i++)
@@ -37,7 +37,7 @@ namespace task1
 
             string line = sr.ReadLine();
 
-            P(line);
+            P(line);//ставим строку в функцию
 
             sr.Close();
             fs.Close();
