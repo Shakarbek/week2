@@ -18,17 +18,18 @@ namespace task3
         }
         public static void F(DirectoryInfo dir, int level)
         {
-            foreach (FileInfo f in dir.GetFiles())
+            foreach (FileInfo f in dir.GetFiles())//для  каждого файла из дир. пишем название этого файла с начальным левелом
             {
                 Level(level);
                 Console.WriteLine(f.Name);
             }
-            foreach (DirectoryInfo d in dir.GetDirectories())
+            foreach (DirectoryInfo d in dir.GetDirectories())//для каждой папки в дир пишем название папки с начальным левелом
             {
                 Level(level);
                 Console.WriteLine(d.Name);
 
-                F(d, level + 1);
+                F(d, level + 1);//ставим функцию F на каждую папку в дир добавляя 1 к левелу
+               
             }
         }
         static void Main(string[] args)
